@@ -13,10 +13,12 @@ const AuthProvider = ({children}) => {
 
 //    create user with email and password
    const createUser = (email, password) => {
+    setLoading(true);
         return createUserWithEmailAndPassword(auth, email, password); 
    }
 //    log in user
    const signIn = (email, password) => {
+    setLoading(true);
         return signInWithEmailAndPassword(auth, email, password);
    }
 //   log out
